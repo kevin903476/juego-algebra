@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Preguntas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Fondo estático -->
+    <div class="background-layer"></div>
+
+    <!-- Contenedor del juego -->
+    <div class="game-wrapper">
+        <div class="game-container" id="game-container">
+            <div class="path"></div>
+            <div id="obstacle-container"></div>
+            <img id="character" src="character.gif" alt="Personaje">
+            <img id="prize" src="prize.gif" alt="Premio" style="width: 120px;">
+
+        </div>
+    </div>
+
+    <!-- UI elementos -->
+    <div class="question-box">
+        <p id="question-text"></p>
+        <button class="answer-btn" id="answer1"></button>
+        <button class="answer-btn" id="answer2"></button>
+    </div>
+    <div class="win-message" id="win-message">🎉 ¡Ganaste el juego! 🎉</div>
+
+    <!-- Elementos de audio -->
+    <audio id="walk-sound" src="walk.mp3"></audio>
+    <audio id="stop-sound" src="stop.mp3"></audio>
+    <audio id="win-sound" src="win.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

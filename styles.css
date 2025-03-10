@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Capa de fondo estática */
+.background-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('background2.png') no-repeat center center;
+    background-size: cover;
+    z-index: 1;
+}
+
+/* Contenedor que limita la vista del juego */
+.game-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 2;
+}
+
+/* Contenedor que se moverá */
+.game-container {
+    position: absolute;
+    width: 5000px; /* Área amplia para el juego */
+    height: 100%;
+    transition: transform 0.05s linear; /* Transición más rápida y lineal para movimiento fluido */
+    will-change: transform; /* Optimizar para animaciones */
+}
+
+.path {
+    position: absolute;
+    bottom: 0;
+    width: 10000px; /* Camino largo para que no desaparezca */
+    height: 15vh; /* Que ocupe el 15% de la pantalla sin recortar */
+    background: linear-gradient(#422008, #6d3921); /* Color marrón como tierra */
+    border-top: 5px solid #422008; /* Borde superior para destacar el camino */
+    box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.5); /* Sombras para que se vea con profundidad */
+}
+
+
+
+
+.obstacle {
+    position: absolute;
+    bottom: 7%;
+    width: 120px;
+    height: 130px;
+    background: url('obstacle.png') no-repeat center/cover;
+    display: none;
+}
+
+#character {
+    position: absolute;
+    bottom: 10%;
+    left: 80px;
+    width: 100px;
+    z-index: 3;
+    will-change: transform; /* Optimizar para animaciones */
+    /* No usar transition aquí para permitir la animación por JavaScript */
+}
+
+#prize {
+    position: absolute;
+    bottom: 10%;
+    left: 6500px; /* Más adelante en el camino */
+    width: 100px;
+    z-index: 3;
+    display: none;
+}
+
+.question-box {
+    display: none;
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    width: 300px;
+}
+
+.answer-btn {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 80%;
+    border: none;
+    background: #2a9d8f;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.answer-btn:hover {
+    background: #264653;
+}
+
+.win-message {
+    display: none;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    background: #FFD700;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    animation: bounce 1s infinite alternate;
+    z-index: 100;
+}
+
+@keyframes bounce {
+    from { transform: translate(-50%, -50%) scale(1); }
+    to { transform: translate(-50%, -50%) scale(1.1); }
+}
