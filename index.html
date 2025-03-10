@@ -7,6 +7,25 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Modal de Inicio -->
+    <div id="start-modal" class="modal">
+        <div class="modal-content">
+            <h1>¡Bienvenido a Juego de Preguntas!</h1>
+            <p>Ayuda al personaje a llegar a su destino respondiendo preguntas correctamente. ¡Pero cuidado con los obstáculos!</p>
+            <button id="start-button">Iniciar Juego</button>
+        </div>
+    </div>
+
+    <!-- Modal de Fin del Juego -->
+    <div id="end-modal" class="modal hidden">
+        <div class="modal-content">
+            <h1>¡Felicidades! 🎉</h1>
+            <p>Has completado el juego.</p>
+            <button id="restart-button">Reiniciar Juego</button>
+            <button id="menu-button">Volver al Menú</button>
+        </div>
+    </div>
+
     <!-- Fondo estático -->
     <div class="background-layer"></div>
 
@@ -16,8 +35,7 @@
             <div class="path"></div>
             <div id="obstacle-container"></div>
             <img id="character" src="character.gif" alt="Personaje">
-            <img id="prize" src="prize.gif" alt="Premio" style="width: 120px;">
-
+            <img id="prize" src="prize.gif" alt="Premio" style="width: 120px; margin-left: 50px;">
         </div>
     </div>
 
@@ -27,6 +45,7 @@
         <button class="answer-btn" id="answer1"></button>
         <button class="answer-btn" id="answer2"></button>
     </div>
+    
     <div class="win-message" id="win-message">🎉 ¡Ganaste el juego! 🎉</div>
 
     <!-- Elementos de audio -->

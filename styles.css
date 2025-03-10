@@ -52,9 +52,18 @@ body, html {
     bottom: 0;
     width: 10000px; /* Camino largo para que no desaparezca */
     height: 15vh; /* Que ocupe el 15% de la pantalla sin recortar */
-    background: linear-gradient(#422008, #6d3921); /* Color marrón como tierra */
-    border-top: 5px solid #422008; /* Borde superior para destacar el camino */
-    box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.5); /* Sombras para que se vea con profundidad */
+
+
+    background-image: url('./bloque-tierra.jpg');
+    background-size: contain; /* o 'cover' dependiendo de tus preferencias */
+    background-repeat: repeat-x; /* Para repetir horizontalmente */
+    image-rendering: pixelated; /* Para mantener la estética pixelada */
+    
+    /* Borde superior para dar definición */
+    border-top: 5px solid #3A8924;
+    
+    /* Sombra para dar profundidad */
+    box-shadow: inset 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
 
@@ -63,9 +72,10 @@ body, html {
 .obstacle {
     position: absolute;
     bottom: 7%;
-    width: 120px;
-    height: 130px;
-    background: url('obstacle.png') no-repeat center/cover;
+    width: 100px;
+    margin-left: 28px;
+    height: 160px;
+    background: url('obstacle2.png') no-repeat center/cover;
     display: none;
 }
 
@@ -131,6 +141,53 @@ body, html {
     text-align: center;
     animation: bounce 1s infinite alternate;
     z-index: 100;
+}
+
+
+/* Estilo general del modal */
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 200;
+}
+
+/* Contenido del modal */
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos para los botones */
+.modal-content button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 80%;
+    border: none;
+    background: #2a9d8f;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.modal-content button:hover {
+    background: #264653;
+}
+
+/* Ocultar los modales por defecto */
+.hidden {
+    display: none;
 }
 
 @keyframes bounce {
