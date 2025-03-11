@@ -183,9 +183,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Volver al menú principal
     menuButton.addEventListener("click", () => {
-        endModal.classList.add("hidden");
-        startModal.classList.remove("hidden");
-        resetGame();
+        location.reload();
     });
 
     function resetGame() {
