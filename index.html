@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Juego de Preguntas</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <!-- Modal de Inicio -->
     <div id="start-modal" class="modal">
-        <div class="modal-content">
-            <h1>¡Bienvenido a Juego de Preguntas!</h1>
-            <p>Ayuda al personaje a llegar a su destino respondiendo preguntas correctamente. ¡Pero cuidado con los obstáculos!</p>
-            <button id="start-button">Iniciar Juego</button>
-        </div>
+      <div class="modal-content">
+        <h1>¡Bienvenido a Juego de Preguntas!</h1>
+        <p>
+          Ayuda al personaje a llegar a su destino respondiendo preguntas
+          correctamente. ¡Pero cuidado con los obstáculos!
+        </p>
+        <button id="start-button">Iniciar Juego</button>
+      </div>
     </div>
 
     <!-- Modal de Fin del Juego -->
     <div id="end-modal" class="modal hidden">
-        <div class="modal-content">
-            <h1>¡Felicidades! 🎉</h1>
-            <p>Has completado el juego.</p>
-            <button id="restart-button">Reiniciar Juego</button>
-            <button id="menu-button">Volver al Menú</button>
-        </div>
+      <div class="modal-content">
+        <h1>¡Felicidades! 🎉</h1>
+        <p>Has completado el juego.</p>
+        <button id="restart-button">Reiniciar Juego</button>
+        <button id="menu-button">Volver al Menú</button>
+      </div>
     </div>
 
     <!-- Fondo estático -->
@@ -31,21 +34,36 @@
 
     <!-- Contenedor del juego -->
     <div class="game-wrapper">
-        <div class="game-container" id="game-container">
-            <div class="path"></div>
-            <div id="obstacle-container"></div>
-            <img id="character" src="character.gif" alt="Personaje">
-            <img id="prize" src="prize.gif" alt="Premio" style="width: 120px; margin-left: 50px;">
-        </div>
+      <div class="game-container" id="game-container">
+        <div class="path"></div>
+        <div id="obstacle-container"></div>
+        <img id="character" src="character.gif" alt="Personaje" />
+        <img
+          id="prize"
+          src="prize.gif"
+          alt="Premio"
+          style="width: 120px; margin-left: 50px"
+        />
+      </div>
     </div>
 
     <!-- UI elementos -->
     <div class="question-box">
-        <p id="question-text"></p>
-        <button class="answer-btn" id="answer1"></button>
-        <button class="answer-btn" id="answer2"></button>
+      <p id="question-text"></p>
+      <button class="answer-btn" id="answer0"></button>
+      <button class="answer-btn" id="answer1"></button>
+      <button class="answer-btn" id="answer2"></button>
+      <button class="answer-btn" id="answer3"></button>
     </div>
-    
+
+    <!-- Modal de Feedback -->
+    <div id="feedback-modal" class="modal hidden">
+      <div class="modal-content">
+        <p id="feedback-text"></p>
+        <button id="feedback-ok-button">OK</button>
+      </div>
+    </div>
+
     <div class="win-message" id="win-message">🎉 ¡Ganaste el juego! 🎉</div>
 
     <!-- Elementos de audio -->
@@ -54,5 +72,11 @@
     <audio id="win-sound" src="win.mp3"></audio>
 
     <script src="script.js"></script>
-</body>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+  </body>
 </html>
