@@ -66,7 +66,19 @@ body, html {
     box-shadow: inset 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
-
+.image-obsidian {
+    background-image: url('./obsidian.jpg') !important;
+    background-size: contain !important;  /* o 'cover' dependiendo de tus preferencias */
+    background-repeat: repeat-x !important; /* Para repetir horizontalmente */
+    image-rendering: pixelated !important; /* Para mantener la estética pixelada */
+    
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  .image-obsidian:hover{
+    transform: scale(1.1);
+  }
 
 
 .obstacle {
@@ -194,3 +206,55 @@ body, html {
     from { transform: translate(-50%, -50%) scale(1); }
     to { transform: translate(-50%, -50%) scale(1.1); }
 }
+
+
+/* Contenedor del modal de inicio */
+#start-modal .modal-content {
+    position: relative;
+    z-index: 1;
+    width: 320px;
+    border: 16px solid black; /* Marco tipo obsidiana */
+    border-radius: 10px;
+    overflow: hidden; /* Muy importante: oculta lo que se salga del borde */
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.4);
+    background: rgba(0, 0, 0, 0.6); /* Fallback si el video no carga */
+    backdrop-filter: blur(5px);
+    color: white;
+    padding: 20px;
+  }
+  
+  /* Video dentro del modal como fondo */
+  #start-modal .portal-video {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.9;
+    animation: portalPulse 2s infinite ease-in-out;
+  }
+  
+  /* El contenido va sobre el video */
+  #start-modal .modal-content > *:not(.portal-video) {
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Animación estilo portal */
+  @keyframes portalPulse {
+    0% {
+      transform: scale(1);
+      filter: brightness(1.2) saturate(1.2) hue-rotate(0deg);
+    }
+    50% {
+      transform: scale(1.03);
+      filter: brightness(1.4) saturate(1.4) hue-rotate(15deg);
+    }
+    100% {
+      transform: scale(1);
+      filter: brightness(1.2) saturate(1.2) hue-rotate(0deg);
+    }
+  }
+  

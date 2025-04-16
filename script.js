@@ -34,11 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let moving = false;
   let animationFrameId = null;
 
-  startButton.addEventListener("click", () => {
-    startModal.classList.add("hidden");
-    moving = true;
-    moveCharacter();
-  });
+
 
   function createObstacles() {
     obstacleContainer.innerHTML = "";
@@ -125,6 +121,23 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   ];
 
+  function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      // Escoge un índice aleatorio entre 0 e i (inclusive)
+      const j = Math.floor(Math.random() * (i + 1));
+  
+      // Intercambia el elemento actual con el elemento en la posición aleatoria
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+  }
+  
+  startButton.addEventListener("click", () => {
+    //shuffleArray(questions); // Mezcla las preguntas al iniciar el juego
+    startModal.classList.add("hidden");
+    moving = true;
+    moveCharacter();
+  });
+
   let characterWalkCycle = 0;
   function animateCharacterWalk() {
     if (!moving) return;
@@ -133,6 +146,8 @@ document.addEventListener("DOMContentLoaded", () => {
     character.style.transform = `translateY(${verticalOffset}px)`;
   }
 
+ 
+  
   function moveCharacter() {
     if (!moving) return;
 

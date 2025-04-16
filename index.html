@@ -10,14 +10,19 @@
     <!-- Modal de Inicio -->
     <div id="start-modal" class="modal">
       <div class="modal-content">
-        <h1>¡Bienvenido a Juego de Preguntas!</h1>
+        <video autoplay muted loop playsinline class="portal-video">
+          <source src="nether.mp4" type="video/mp4" />
+          Tu navegador no soporta video HTML5.
+        </video>
+        <h1>¡Bienvenido a Juego de Transformaciones lineales!</h1>
         <p>
           Ayuda al personaje a llegar a su destino respondiendo preguntas
           correctamente. ¡Pero cuidado con los obstáculos!
         </p>
-        <button id="start-button">Iniciar Juego</button>
+        <button id="start-button" class="image-obsidian">Iniciar Juego</button>
       </div>
     </div>
+    
 
     <!-- Modal de Fin del Juego -->
     <div id="end-modal" class="modal hidden">
