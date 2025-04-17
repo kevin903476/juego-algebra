@@ -50,75 +50,187 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const questions = [
     {
-      question:
-        "¿Cuál de las siguientes funciones es una transformación lineal?",
-      options: [
-        "T(x,y) = (x+1, y)",
-        "T(x,y) = (2x, y²)",
-        "T(x,y) = (x−y, 3y)",
-        "T(x,y) = (sin(x), y)",
-      ],
-      correct: 2,
-      feedback:
-        "La opción correcta es \\(T(x,y) = (x - y, 3y)\\), ya que cumple con las propiedades de linealidad (aditividad y homogeneidad).",
-    },
-    {
-      question: "¿Cuál es el núcleo de \\(T(x,y,z) = (x + 2y - z, 0)\\)?",
-      options: [
-        "\\(\\{(0,0,0)\\}\\)",
-        "\\(\\{(x,y,z) \\mid x + 2y - z = 0\\}\\)",
-        "\\(\\{(x,y,z) \\mid x = z, y = 0\\}\\)",
-        "\\(\\{(x,y,z) \\mid x = -2y + z\\}\\)",
+      question:"Demuestre que \\( {R}^2 \\to {R}^2 = T \\begin{pmatrix} X \\\\ Y \\end{pmatrix} = \\begin{pmatrix} x+3y \\\\ x+2y \\end{pmatrix} \;  u = \\begin{pmatrix} 2 \\\\ 3 \\end{pmatrix} \;  v = \\begin{pmatrix} 5 \\\\ 7 \\end{pmatrix} \\)",
+
+        options: [
+        "\\( T(u+v)= \\begin{pmatrix} 15 \\\\ 15 \\end{pmatrix} \\)",
+        "\\( T(u+v)= \\begin{pmatrix} 22 \\\\ 16 \\end{pmatrix} \\)",
+        "\\( T(u+v)= \\begin{pmatrix} 17 \\\\ 55 \\end{pmatrix} \\)",
+        "\\( T(u+v)= \\begin{pmatrix} 40 \\\\ 56 \\end{pmatrix} \\)",
       ],
       correct: 1,
       feedback:
-        "El núcleo son los vectores que cumplen \\(x + 2y - z = 0\\), es decir, todos los que hacen \\(T(x,y,z) = (0,0)\\).",
+     `
+  La opción correcta es:<br>
+  \\( T(u+v) = \\begin{pmatrix} 22 \\\\ 16 \\end{pmatrix} \\)<br><br>
+  Desglose paso a paso:<br>
+  \\( T(u+v) = u + v = \\begin{pmatrix} 7 + 3 \\cdot 10 \\\\ 7 + 2 \\cdot 10 \\end{pmatrix} = \\begin{pmatrix} 37 \\\\ 27 \\end{pmatrix} \\)<br><br>
+  \\( T(\\alpha \\cdot u) = 2 \\cdot \\begin{pmatrix} 2 \\\\ 3 \\end{pmatrix} = \\begin{pmatrix} 4 + 3 \\cdot 6 \\\\ 4 + 2 \\cdot 6 \\end{pmatrix} = \\begin{pmatrix} 22 \\\\ 16 \\end{pmatrix} \\)<br><br>
+  \\( \\alpha \\cdot T(u) = 2 \\cdot \\begin{pmatrix} 11 \\\\ 8 \\end{pmatrix} = \\begin{pmatrix} 22 \\\\ 16 \\end{pmatrix} \\)`,
     },
+
     {
-      question:
-        "Si \\(T\\) tiene la matriz \\(\\begin{bmatrix}2 & -1 \\\\ 0 & 3\\end{bmatrix}\\), ¿cuál es \\(T(1, -1)\\)?",
+      question: "¿El dominio y codominio en las transformaciones lineales deben ser espacios vectoriales?",
       options: [
-        "\\((3, -3)\\)",
-        "\\((1, 3)\\)",
-        "\\((2, 0)\\)",
-        "\\((-1, 0)\\)",
+        "Verdadero",
+        "Falso",
+      
+     
       ],
       correct: 0,
       feedback:
-        "\\(T(1, -1) = (2 \\cdot 1 + (-1) \\cdot -1, 0 \\cdot 1 + 3 \\cdot (-1)) = (3, -3)\\).",
+        "La opcion correcta es VERDADERO",
     },
+
     {
-      question: "¿Cuál es la imagen de \\(T(x,y,z) = (x+z, 2y)\\)?",
+      question:
+        "\\( \\text{Consideremos } f: \\mathbb{R} \\to \\mathbb{R}, \\text{ función } f(x) = 3x; \\quad u = 6; \\quad v = 9; \\quad \\alpha = 2 \\)",
       options: [
-        "Todo \\(\\mathbb{R}^2\\)",
-        "Una recta en \\(\\mathbb{R}^2\\)",
-        "Un plano en \\(\\mathbb{R}^2\\)",
-        "Un punto",
+        "\\( T(u+v) = 25 \\quad T(\\alpha \\cdot u) = 56 \\)",
+        "\\( T(u+v) = 45 \\quad T(\\alpha \\cdot u) = 36 \\)",
+        "\\( T(u+v) = 50 \\quad T(\\alpha \\cdot u) = 89 \\)",
+        "\\( T(u+v) = 85 \\quad T(\\alpha \\cdot u) = 15 \\)",
+     
+      ],
+      correct: 1,
+      feedback:
+         ` la opcion correcta es: <br>
+         \\( T(u+v) = 45 \\quad T(\\alpha \\cdot u) = 36 \\)<br><br>
+         Desglose paso a paso:<br><br>
+         \\( T(u+v) = 3(15) = 45; \\quad T(u) + T(v) = 3(6) = 18 + 3(9) = 27 = 45 \\)<br><br>
+         \\( T(\\alpha \\cdot u) = 2(6) = 12; \\quad 3(12) = 36 \\)<br><br>
+         \\( \\alpha \\cdot T(u) = 3(18) = 36 \\)`,
+    },
+    
+    {
+      question: "El endomorfismo se presenta cuando?",
+      options: [
+        "El dominio es igual al codominio",
+        "El dominio es mayor que el  codominio",
+        "El dominio es diferente al  codominio",
+      
       ],
       correct: 0,
       feedback:
-        "La matriz tiene rango 2, así que la imagen de \\(T\\) es todo \\(\\mathbb{R}^2\\).",
+        "La opcion correcta es El dominio es igual al codominio, ya que para poder cumplir como un endomorfismo se presenta cuando el dominio y el codominio son iguales",
     },
     {
       question:
-        "¿Cuál es la matriz de \\(T(ax + b) = (2a + b)x + 3a\\) respecto a \\(B = \\{1, x\\}\\)?",
+      `
+      \\( \\text{Determine si } \\mathbb{R}^3 \\to \\mathbb{R}^3, \\; T(x, y, z) = (-x + 2y, x + y + z, 2x - y + z); \\;<br>
+      u = (1, 2, -1); \\; v = (1, 3, 2); \\; \\alpha = 2 \\)
+    `,
       options: [
-        "\\(\\begin{bmatrix}3 & 2 \\\\ 0 & 1\\end{bmatrix}\\)",
-        "\\(\\begin{bmatrix}2 & 1 \\\\ 3 & 0\\end{bmatrix}\\)",
-        "\\(\\begin{bmatrix}3 & 0 \\\\ 2 & 1\\end{bmatrix}\\)",
-        "\\(\\begin{bmatrix}0 & 3 \\\\ 1 & 2\\end{bmatrix}\\)",
+       
+        "\\( \\alpha \\cdot T(u) = (7, 5, -3) \\)",
+        "\\( \\alpha \\cdot T(u) = (6, -4, 2) \\)",
+        "\\( \\alpha \\cdot T(u) = (6, 4, -2) \\)",
+        "\\( \\alpha \\cdot T(u) = (-6, 4, -2) \\)",
+      
       ],
       correct: 2,
       feedback:
-        "\\(T(1) = x \\Rightarrow [0,1],\\ T(x) = 2x + 3 \\Rightarrow [3,2]\\), por tanto matriz: \\(\\begin{bmatrix}3 & 0 \\\\ 2 & 1\\end{bmatrix}\\).",
+   `
+  La opción correcta es: <br>
+  \\( \\alpha \\cdot T(u) = (6, 4, -2) \\)<br><br>
+  
+  Desglose paso a paso:<br><br>
+  \\( T(u+v) = (-2 + 2 \\cdot 5, 2 + 5 + 1, 2 \\cdot 2 - 5 + 1) = (8, 8, 0) \\)<br><br>
+  
+  \\( T(u) + T(v) = (-1 + 2 \\cdot 2, 1 + 2 + (-1), 2 \\cdot 1 - 2 + (-1)) + (-1 + 2 \\cdot 3, 1 + 3 + 2, 2 \\cdot 1 - 3 + 2) \\)<br>
+  \\( = (3, 2, -1) + (5, 6, 1) = (8, 8, 0) \\)<br><br>
+  
+  \\( T(\\alpha \\cdot u) = 2(1,2,-1) = (2,4,-2) = (-2 + 2 \\cdot 4, 2 + 4 + (-2), 2 \\cdot 2 - 4 + (-2)) \\)<br><br>
+  
+  \\( \\alpha \\cdot T(u) = 2 \\cdot (3,2,-1) = (6,4,-2) \\)
+`,
+    },
+
+    {
+      question: "\\( \\text{Determine el núcleo para } T: \\mathbb{R}^2 \\to \\mathbb{R}^2, \\; T(x, y) = (7x - 9y, 3x - 7y) \\)",
+      options: [
+        "\\( \\text{Núcleo} = \\left\\{ (y, x) \\right\\} = \\left\\{ (0, 0) \\right\\} \\)", 
+        "\\( \\text{Núcleo} = \\left\\{ (x, y) \\right\\} = \\left\\{ (1, 0) \\right\\} \\)",
+        "\\( \\text{Núcleo} = \\left\\{ (x, y) \\right\\} = \\left\\{ (0, 1) \\right\\} \\)",
+        "\\( \\text{Núcleo} = \\left\\{ (x, y) \\right\\} = \\left\\{ (0, 0) \\right\\} \\)"
+      ],
+      correct: 3,
+      feedback:
+          `
+          La opción correcta es: <br>
+        \\( \\text{Núcleo} = \\left\\{ (x, y) \\right\\} = \\left\\{ (0, 0) \\right\\} \\)<br><br>
+        Desglose paso a paso:<br><br>
+        \\( 7x - 9y = 0 \\)<br><br>
+        \\( 3x - 7y = 0 \\)<br><br>
+        x=0 / y=0`,
     },
     {
-      question: "Si \\(\\ker(T) = \\{(0,0)\\}\\), entonces \\(T\\) es:",
-      options: ["Sobreyectiva", "Inyectiva", "Biyectiva", "No lineal"],
-      correct: 1,
+      question: "Un monomorfismo se presenta cuando",
+      options: [
+        "Es sobreyectiva", 
+        "Es biyectiva", 
+        "Es inyectiva", 
+    
+      ],
+      correct: 2,
       feedback:
-        "Si el núcleo solo contiene al vector cero, entonces \\(T\\) es inyectiva.",
+          `
+          La opción correcta es: <br>
+       Inyectiva, esto porque V: T(u)=T(v)`,
     },
+    {
+      question: `\\( \\text{Calcule la aplicación lineal de } T: \\mathbb{R}^3 \\to \\mathbb{R}^3, \\text{ encuentre la fórmula y calcule } (3,2,5) \\)<br>
+      T(1,0,0)=(2,-3)<br><br>
+      T(0,1,0)=(1,1)<br><br>
+      T(0,0,1)=(6,5)`,
+      options: [
+        "\\( \\text{Fórmula} = (5x + 5y + z, 3x + 2y + 5z) \\quad \\text{y el cálculo de} \\quad (3,2,5) = (38,18) \\)", 
+        "\\( \\text{Fórmula} = (x + 2y + 7z, -8x + 9y + 2z) \\quad \\text{y el cálculo de} \\quad (3,2,5) = (38,18) \\)", 
+        "\\( \\text{Fórmula} = (2x + 1y + 6z, -3x + 1y + 5z) \\quad \\text{y el cálculo de} \\quad (3,2,5) = (38,18) \\)", 
+        "\\( \\text{Fórmula} = (-2x + 1y + 6z, 3x + 1y - 5z) \\quad \\text{y el cálculo de} \\quad (3,2,5) = (38,18) \\)", 
+       
+    
+      ],
+      correct: 2,
+      feedback:
+          `
+          La opción correcta es: <br>
+       \\( \\text{Fórmula} = (2x + 1y + 6z, -3x + 1y + 5z) \\quad \\text{y el cálculo de} \\quad (3,2,5) = (38,18) \\)<br><br>
+           Desglose paso a paso:<br><br>
+           \\( T(x,y,z) = x T(1,0,0) + y T(0,1,0) + z T(0,0,1) \\)<br><br>
+           \\( x(2,-3) + y(1,1) + z(6,5) \\)<br><br>
+           \\( (2x, -3x) + (1y + 1y) + (6z, 5z) = (2x + 1y + 6z, -3x + 1y + 5z) \\)<br><br>
+           \\( (3,2,5) = (2 \\cdot 3 + 1 \\cdot 2 + 6 \\cdot 5, -3 \\cdot 3 + 1 \\cdot 2 + 5 \\cdot 5) = (38,18) \\)`,
+    },
+    {
+      question: "Es epimorfismo cuando",
+      options: [
+        "Es sobreyectiva", 
+        "Es biyectiva", 
+        "Es inyectiva", 
+    
+      ],
+      correct: 0,
+      feedback:
+          `
+          La opción correcta es: <br>
+       Sobreyectiva, esto porque V/ w=T(v)`,
+    },
+    {
+      question: "\\( \\text{Determine el núcleo para } T: \\mathbb{R}^2 \\to \\mathbb{R}^2, \\; T(a,b) = (10a + 7b, 5a - 3b, -15a - 12b) \\)",
+      options: [
+        "\\( \\text{Núcleo} = (a, b) = (0, 0) \\)", 
+        "\\( \\text{Núcleo} = (b, a) = (0, 0) \\)", 
+        "Infinitas", 
+    
+      ],
+      correct: 2,
+      feedback:
+          `
+          La opción correcta es: Infinitas <br>
+      Ya  que el nucleo da respuestas infinitas`,
+    },
+
   ];
 
   function shuffleArray(array) {
