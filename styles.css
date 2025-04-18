@@ -108,12 +108,25 @@ body, html {
     width: 100px;
     z-index: 3;
     display: none;
+    
 }
+
+#question-text{
+    text-align: center;
+
+    
+}
+
+mjx-math {
+    white-space: normal !important;
+}
+
 
 .question-box {
     display: none;
+    
     position: fixed;
-    top: 30%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     background: white;
@@ -121,8 +134,14 @@ body, html {
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     z-index: 100;
-    width: 800px;
+    width: 90vw;
+    max-width: 800px;
+    max-height: 80vh;
+    overflow-y: auto;
+    overflow-x: auto;
+    box-sizing: border-box;
 }
+
 
 .answer-btn {
     display: block;
@@ -180,6 +199,7 @@ body, html {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
+
 /* Estilos para los botones */
 .modal-content button {
     display: block;
@@ -208,8 +228,9 @@ body, html {
 }
 
 
+
 /* Contenedor del modal de inicio */
-#start-modal .modal-content {
+#start-modal .modal-content, #end-modal .modal-content {
     position: relative;
     z-index: 1;
     width: 320px;
@@ -224,7 +245,7 @@ body, html {
   }
   
   /* Video dentro del modal como fondo */
-  #start-modal .portal-video {
+  #start-modal .portal-video, #end-modal .portal-video {
     position: absolute;
     top: 0; left: 0;
     width: 100%;
@@ -237,7 +258,7 @@ body, html {
   }
   
   /* El contenido va sobre el video */
-  #start-modal .modal-content > *:not(.portal-video) {
+  #start-modal .modal-content > *:not(.portal-video), #end-modal .modal-content > *:not(.portal-video) {
     position: relative;
     z-index: 1;
   }
@@ -257,4 +278,90 @@ body, html {
       filter: brightness(1.2) saturate(1.2) hue-rotate(0deg);
     }
   }
+
+
+  /* MODAL de Instrucciones - aislado */
+#modal-como-jugar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 250;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(3px);
+  }
+  
+  #modal-como-jugar.hidden {
+    display: none;
+  }
+  
+  #modal-como-jugar .instrucciones-content {
+    position: relative;
+    max-width: 750px;
+    width: 90%;
+    background: #1f1f1f;
+    border-radius: 12px;
+    padding: 30px;
+    color: #f0f0f0;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    animation: fadeInCenter 0.4s ease-out;
+    overflow-y: auto;
+    max-height: 85vh;
+  }
+  
+  #modal-como-jugar .instrucciones-content h2 {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 2px #000;
+  }
+  #modal-como-jugar .instrucciones-content p{text-align: center;}
+  #modal-como-jugar .instrucciones-content p,
+  #modal-como-jugar .instrucciones-content li {
+    color: #e2e2e2;
+  }
+  
+  #modal-como-jugar .instrucciones-content ul {
+    padding-left: 20px;
+    margin-top: 10px;
+  }
+  
+  #modal-como-jugar .instrucciones-content li {
+    margin-bottom: 10px;
+  }
+  
+  /* Botón cerrar */
+  #modal-como-jugar .cerrar {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    font-size: 28px;
+    color: #ff4d4d;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  #modal-como-jugar .cerrar:hover {
+    transform: scale(1.3);
+    color: #fff;
+  }
+  
+  /* Animación */
+  @keyframes fadeInCenter {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
   

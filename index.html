@@ -20,19 +20,45 @@
           correctamente. ¡Pero cuidado con los obstáculos!
         </p>
         <button id="start-button" class="image-obsidian">Iniciar Juego</button>
+        <button id="how-to-play" class="image-obsidian">¿Cómo se juega?</button>
       </div>
     </div>
-    
 
-    <!-- Modal de Fin del Juego -->
-    <div id="end-modal" class="modal hidden">
-      <div class="modal-content">
-        <h1>¡Felicidades! 🎉</h1>
-        <p>Has completado el juego.</p>
-        <button id="restart-button">Reiniciar Juego</button>
-        <button id="menu-button">Volver al Menú</button>
+    <!-- Modal de instrucciones -->
+    <div id="modal-como-jugar" class="modal hidden">
+      <div class="instrucciones-content">
+        <span id="cerrar-modal" class="cerrar">&times;</span>
+        <h2>¿Cómo jugar?</h2>
+        <p>
+          Sumérgete en un desafiante juego basado en <strong>transformaciones lineales</strong>.
+        </p>
+        <p>
+          Controlas un personaje que avanza mientras enfrenta obstáculos en su camino.
+        </p>
+        <ul>
+          <li>🧱 Al chocar con un obstáculo, deberás responder una pregunta relacionada con el tema.</li>
+          <li>✅ Para ganar, responde correctamente <strong>6 preguntas consecutivas</strong>.</li>
+          <li>❌ Si fallas una, vuelves al inicio.</li>
+          <li>🎮 El juego continúa hasta que logres responder todas correctamente.</li>
+        </ul>
+        <p>¡Mucho éxito! 💡</p>
       </div>
     </div>
+
+  <!-- Modal de Fin del Juego -->
+  <div id="end-modal" class="modal hidden">
+    <div class="modal-content">
+      <video autoplay muted loop playsinline class="portal-video">
+        <source src="nether.mp4" type="video/mp4" />
+        Tu navegador no soporta video HTML5.
+      </video>
+      <h1>💎¡Felicidades!💎</h1>
+      <p>Has completado el juego.</p>
+      <button id="restart-button" class="image-obsidian">Reiniciar Juego</button>
+      <button id="menu-button" class="image-obsidian">Volver al Menú</button>
+    </div>
+  </div>
+
 
     <!-- Fondo estático -->
     <div class="background-layer"></div>
