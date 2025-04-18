@@ -231,7 +231,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   startButton.addEventListener("click", () => {
-    //shuffleArray(questions); // Mezcla las preguntas al iniciar el juego
+    shuffleArray(questions); // Mezcla las preguntas al iniciar el juego
     startModal.classList.add("hidden");
     moving = true;
     moveCharacter();
@@ -351,6 +351,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   function resetGame() {
+    shuffleArray(questions); // Mezcla las preguntas al iniciar el juego
     correctAnswers = 0;
     currentObstacleIndex = 0;
     characterPosition = 50;
