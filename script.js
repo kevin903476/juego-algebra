@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
          Desglose paso a paso:<br><br>
          \\( T(u+v) = 3(15) = 45; \\quad T(u) + T(v) = 3(6) = 18 + 3(9) = 27 = 45 \\)<br><br>
          \\( T(\\alpha \\cdot u) = 2(6) = 12; \\quad 3(12) = 36 \\)<br><br>
-         \\( \\alpha \\cdot T(u) = 3(18) = 36 \\)`,
+         \\( \\alpha \\cdot T(u) = 2(18) = 36 \\)`,
     },
 
     {
