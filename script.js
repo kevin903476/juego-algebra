@@ -67,18 +67,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const questions = [
     {
       question:
-        "Demuestre que \\( {R}^2 \\to {R}^2 = T \\begin{pmatrix} X \\\\ Y \\end{pmatrix} = \\begin{pmatrix} x+3y \\\\ x+2y \\end{pmatrix} ;  u = \\begin{pmatrix} 2 \\\\ 3 \\end{pmatrix} ;  v = \\begin{pmatrix} 5 \\\\ 7 \\end{pmatrix} \\)",
+        "Demuestre que \\( {R}^2 \\to {R}^3 = T \\begin{pmatrix} X \\\\ Y \\end{pmatrix} = \\begin{pmatrix} x+3y \\\\ x+2y \\end{pmatrix} ;  u = \\begin{pmatrix} 2 \\\\ 3 \\end{pmatrix} ;  v = \\begin{pmatrix} 5 \\\\ 7 \\end{pmatrix} \\alpha = 2 \\)",
 
       options: [
-        "\\( T(u+v)= \\begin{pmatrix} 15 \\\\ 15 \\end{pmatrix} \\)",
-        "\\( T(u+v)= \\begin{pmatrix} 22 \\\\ 16 \\end{pmatrix} \\)",
-        "\\( T(u+v)= \\begin{pmatrix} 17 \\\\ 55 \\end{pmatrix} \\)",
-        "\\( T(u+v)= \\begin{pmatrix} 40 \\\\ 56 \\end{pmatrix} \\)",
+        "\\( T(\\alpha \\cdot u)= \\begin{pmatrix} 15 \\\\ 15 \\end{pmatrix} \\)",
+        "\\( T(\\alpha \\cdot u)= \\begin{pmatrix} 22 \\\\ 16 \\end{pmatrix} \\)",
+        "\\( T(\\alpha \\cdot u)= \\begin{pmatrix} 17 \\\\ 55 \\end{pmatrix} \\)",
+        "\\( T(\\alpha \\cdot u)= \\begin{pmatrix} 40 \\\\ 56 \\end{pmatrix} \\)",
       ],
       correct: 1,
       feedback: `
   La opción correcta es:<br><br>
-  \\( T(u+v) = \\begin{pmatrix} 22 \\\\ 16 \\end{pmatrix} \\)<br><br>
+  \\( T(\\alpha \\cdot u) = \\begin{pmatrix} 22 \\\\ 16 \\end{pmatrix} \\)<br><br>
   Desglose paso a paso:<br><br>
   \\( T(u+v) = u + v = \\begin{pmatrix} 7 + 3 \\cdot 10 \\\\ 7 + 2 \\cdot 10 \\end{pmatrix} = \\begin{pmatrix} 37 \\\\ 27 \\end{pmatrix} \\)<br><br>
   \\( T(\\alpha \\cdot u) = 2 \\cdot \\begin{pmatrix} 2 \\\\ 3 \\end{pmatrix} = \\begin{pmatrix} 4 + 3 \\cdot 6 \\\\ 4 + 2 \\cdot 6 \\end{pmatrix} = \\begin{pmatrix} 22 \\\\ 16 \\end{pmatrix} \\)<br><br>
