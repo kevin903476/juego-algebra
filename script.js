@@ -152,21 +152,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
     {
       question:
-        "\\( \\text{Determine el núcleo para } T: \\mathbb{R}^2 \\to \\mathbb{R}^2, \\; T(x, y) = (7x - 9y, 3x - 7y) \\)",
+        "\\( \\text{Determine el núcleo para } T: \\mathbb{R}^3 \\to \\mathbb{R}^3, \\; T(x, y, z) = (7x - 2y + 5z, -9x + 3y + 2z, x - 4y + z) \\)",
       options: [
-        "\\( \\text{Núcleo} = \\left\\{ (y, x) \\right\\} = \\left\\{ (0, 0) \\right\\} \\)",
-        "\\( \\text{Núcleo} = \\left\\{ (x, y) \\right\\} = \\left\\{ (1, 0) \\right\\} \\)",
-        "\\( \\text{Núcleo} = \\left\\{ (x, y) \\right\\} = \\left\\{ (0, 1) \\right\\} \\)",
-        "\\( \\text{Núcleo} = \\left\\{ (x, y) \\right\\} = \\left\\{ (0, 0) \\right\\} \\)",
+        "\\( \\text{Núcleo} = \\left\\{ (y, x, z) \\right\\} = \\left\\{ (0, 0, 0) \\right\\} \\)",
+        "\\( \\text{Núcleo} = \\left\\{ (x, y, z) \\right\\} = \\left\\{ (1, 0, 1) \\right\\} \\)",
+        "\\( \\text{Núcleo} = \\left\\{ (x, y, z) \\right\\} = \\left\\{ (0, 1, 1) \\right\\} \\)",
+        "\\( \\text{Núcleo} = \\left\\{ (x, y, z) \\right\\} = \\left\\{ (0, 0, 0) \\right\\} \\)",
       ],
       correct: 3,
       feedback: `
           La opción correcta es: <br><br>
-        \\( \\text{Núcleo} = \\left\\{ (x, y) \\right\\} = \\left\\{ (0, 0) \\right\\} \\)<br><br>
+        \\( \\text{Núcleo} = \\left\\{ (x, y, z) \\right\\} = \\left\\{ (0, 0, 0) \\right\\} \\)<br><br>
         Desglose paso a paso:<br><br>
-        \\( 7x - 9y = 0 \\)<br><br>
-        \\( 3x - 7y = 0 \\)<br><br>
-        x=0 / y=0`,
+        \\( 7x - 2y + 5z = 0 \\)<br><br>
+        \\( -9x + 3y + 2z = 0 \\)<br><br>
+        \\( x - 4y + z = 0 \\)<br><br>
+        x=0 / y=0 / z=0`,
     },
     {
       question: "Un monomorfismo se presenta cuando",
