@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const questions = [
     {
       question:
-        "Demuestre que \\( {R}^2 \\to {R}^3 = T \\begin{pmatrix} X \\\\ Y \\end{pmatrix} = \\begin{pmatrix} x+3y \\\\ x+2y \\end{pmatrix} ;  u = \\begin{pmatrix} 2 \\\\ 3 \\end{pmatrix} ;  v = \\begin{pmatrix} 5 \\\\ 7 \\end{pmatrix} \\alpha = 2 \\)",
+        "Demuestre que \\( {R}^2 \\to {R}^2 = T \\begin{pmatrix} X \\\\ Y \\end{pmatrix} = \\begin{pmatrix} x+3y \\\\ x+2y \\end{pmatrix} ;  u = \\begin{pmatrix} 2 \\\\ 3 \\end{pmatrix} ;  v = \\begin{pmatrix} 5 \\\\ 7 \\end{pmatrix} \\alpha = 2 \\)",
 
       options: [
         "\\( T(\\alpha \\cdot u)= \\begin{pmatrix} 15 \\\\ 15 \\end{pmatrix} \\)",
